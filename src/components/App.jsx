@@ -10,12 +10,15 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
+        padding:'100px',
+        backgroundColor:'aliceblue',
+        
       }}
     >
       <UserProfile
@@ -27,7 +30,9 @@ export const App = () => {
       />
 
 <StatisticsList title="Upload stats" stats={data} />
+
 <FriendList friends={friends} />
+
 <TransactionHistory transactions={transactions} />
     </div>
   );

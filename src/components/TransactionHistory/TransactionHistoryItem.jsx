@@ -1,7 +1,9 @@
+import css from './TransactionHistory.module.css'
+
 export const TransactionHistoryItem =({type, amount, currency}) =>{
-    return  <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
+    return  <tr className={css.tableData}> 
+      <td className={css.tableDataCell}>{type}</td>
+      <td className={css.tableDataCell}>{amount}</td>
+      <td className={css.tableDataCell}>{currency}</td>
     </tr>
 }
