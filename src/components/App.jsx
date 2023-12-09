@@ -2,10 +2,10 @@ import { UserProfile } from 'components/UserProfile/UserPofile';
 import { StatisticsList } from './StatisticsList/StatisticsList';
 import { FriendList } from './FriendList/FriendList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
-import user from '../user.json'
-import data from '../data.json'
-import friends from '../friends.json'
-import transactions from '../transactions.json'
+import user from 'data/user.json';
+import data from 'data/data.json';
+import friends from 'data/friends.json';
+import transactions from 'data/transactions.json';
 export const App = () => {
   return (
     <div
@@ -16,9 +16,8 @@ export const App = () => {
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
-        padding:'100px',
-        backgroundColor:'aliceblue',
-        
+        padding: '100px',
+        backgroundColor: 'aliceblue',
       }}
     >
       <UserProfile
@@ -29,11 +28,11 @@ export const App = () => {
         stats={user.stats}
       />
 
-<StatisticsList title="Upload stats" stats={data} />
+      <StatisticsList title="Upload stats" stats={data} />
 
-<FriendList friends={friends} />
+      <FriendList friends={friends} />
 
-<TransactionHistory transactions={transactions} />
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 };
